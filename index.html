@@ -7,6 +7,37 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <script>
+        function computerPlay(){
+            a = Math.random()*3;
+            a = Math.floor(a);
+            let computerResult;
+            if (a === 0){
+                computerResult = "Rock";
+            }
+            else if (a === 1){
+                computerResult = "Paper";
+            }
+            else if (a === 2){
+                computerResult = "Scissors";
+            }
+            else{
+                computerResult = "Error";
+            }
+            return(computerResult);
+        }
+
+        console.log(computerPlay());
+
+        let playerInput = prompt("Rock, Paper or Scissors?");
+        playerInput = playerInput.toLowerCase();
+        playerInput = playerInput.toUpperCase(playerInput.charAt(0));
+
+        function playGame(playerSelection, computerSelection){
+            
+        }
+
+        console.log(playGame(playerInput, computerPlay()))
+    </script>
 </body>
 </html>
