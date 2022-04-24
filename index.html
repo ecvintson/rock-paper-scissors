@@ -31,13 +31,34 @@
 
         let playerInput = prompt("Rock, Paper or Scissors?");
         playerInput = playerInput.toLowerCase();
-        playerInput = playerInput.toUpperCase(playerInput.charAt(0));
+        playerInput = playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
+        console.log(playerInput);
 
         function playGame(playerSelection, computerSelection){
-            
+            const r = "Rock";
+            const p = "Paper";
+            const s = "Scissors";
+
+            if (playerSelection === r ){
+                if (computerSelection === r){
+                    return("Tie!");
+                }
+                else if (computerSelection === p){
+                    return("Paper beats Rock, you lose!");
+                }
+                else if (computerSelection === s){
+                    return("Rock beats Scissors, you win!");
+                }
+                else{
+                    return("Error, " + playerSelection + " is not a valid input.");
+                }
+            }
         }
 
-        console.log(playGame(playerInput, computerPlay()))
+        let test;
+        test = playGame(playerInput, computerPlay());
+        console.log(test);
+
     </script>
 </body>
 </html>
