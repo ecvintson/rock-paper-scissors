@@ -19,7 +19,7 @@ function computerPlay(){
 
 
 
-let playerInput = prompt("Rock, Paper or Scissors?");
+// let playerInput = prompt("Rock, Paper or Scissors?");
 playerInput = playerInput.toLowerCase();
 playerInput = playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
 
